@@ -8,6 +8,7 @@ final Widget webscreen;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
+    // ignore: non_constant_identifier_names
     builder:(context,Constraints){
     if(Constraints.minWidth>screenSize){
     return webscreen;
