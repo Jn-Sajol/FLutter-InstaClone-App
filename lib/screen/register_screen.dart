@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instaclone/auth/auth.dart';
 import 'package:instaclone/widgets/textfiled.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       TextEditingController();
   final TextEditingController nametextEditingController =
       TextEditingController();
-  final TextEditingController phonetextEditingController =
+  final TextEditingController biotextEditingController =
       TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         padding: const EdgeInsets.all(33),
         child: Column(
           children: [
+          SvgPicture.asset('assets/images/insta.svg'),
             const Text('login oage'),
              Stack(
             children: [
@@ -53,15 +55,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 24,
             ),
             Textfiled(
-                hintext: 'Name',
+                hintext: 'UserName',
                 contollerText: nametextEditingController,
                 showText: false),
             const SizedBox(
               height: 24,
             ),
             Textfiled(
-                hintext: 'Phone NUmber',
-                contollerText: phonetextEditingController,
+                hintext: 'Bio',
+                contollerText: biotextEditingController,
                 showText: false),
             const SizedBox(
               height: 24,
@@ -84,7 +86,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               width: double.infinity,
               height: 44,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                var sign = SignUpAUth();
+                sign.singup(username: nametextEditingController.text, email: emailtextEditingController.text, password: passtextEditingController.text, bio: biotextEditingController.text);
+                },
                 child: const Text("Login"),
               ),
             ),
