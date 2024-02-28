@@ -22,6 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             SvgPicture.asset('assets/images/insta.svg'),
+            //here we need to add pub dependency first
             const Text('login oage'),
             const SizedBox(height: 24,),
             Textfiled(
