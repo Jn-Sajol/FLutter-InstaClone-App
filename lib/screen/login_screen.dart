@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(33),
+        padding: const EdgeInsets.all(35),
         child: Column(
           children: [
             SvgPicture.asset('assets/images/insta.svg'),
