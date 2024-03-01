@@ -18,13 +18,13 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(35),
+        padding: const EdgeInsets.all(33),
         child: Column(
           children: [
             SvgPicture.asset('assets/images/insta.svg'),
             //here we need to add pub dependency first
             const Text('login oage'),
-            const SizedBox(height: 24,),
+            const SizedBox(height: 25,),
             Textfiled(
                 hintext: 'Email',
                 contollerText: emailtextEditingController,
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(
             width: double.infinity,
-            height: 44,
+            height: 45,
             child: ElevatedButton(
             onPressed: () {}, 
             child: const Text("Login"),
